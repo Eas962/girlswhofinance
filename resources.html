@@ -10,7 +10,10 @@ body, html {
     height: 100%;
     font-family: "Inconsolata", sans-serif;
 }
-
+.navbar a {
+  float: left;
+  display: block;
+  text-align: center;
 }
 .menu {
     display: none;
@@ -19,6 +22,7 @@ body, html {
 <body>
 
 <!-- Links (sit on top) -->
+<div class="navbar">
 <div class="w3-row w3-padding w3-black">
     <div class="w3-col s3">
       <a href="https://eas962.github.io/girlswhofinance/website.html" class="w3-button w3-block w3-black">HOME</a>
@@ -34,7 +38,7 @@ body, html {
     </div>
   </div>
 </div>
-
+    </div>
 
 <!-- Add a background color and large text to the whole page -->
 <div class="w3-sand w3-grayscale w3-large">
@@ -82,7 +86,9 @@ function myMap()
   });
   marker.setMap(map);
 }
-
+    
+<script>
+    
 // Tabbed Menu
 function openMenu(evt, menuName) {
   var i, x, tablinks;
