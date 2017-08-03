@@ -1,100 +1,179 @@
 <!DOCTYPE html>
 <html>
-<title>Girls Who Finance</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-<style>
-body, html {
-    height: 100%;
-    font-family: "Inconsolata", sans-serif;
-}
-
+  <!--style sheet for the website-->
+	<title>Girls Who Finance</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" 	href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+	<style>
+		body, html {
+    	height: 100%;
+    	font-family: "Inconsolata", sans-serif;
+	}
+  /*class for having a fixed top navbar that floats left*/
 .navbar a {
   float: left;
   display: block;
   text-align: center;
-
-}
-.menu {
-    display: none;
 }
 </style>
-<body>
 
-<!-- Links (sit on top) -->
-<div class="navbar">
-  <div class="w3-top">
-    <div class="w3-row w3-padding w3-black">
-      <div class="w3-col s3">
-        <a href="https://eas962.github.io/girlswhofinance/website.html" class="w3-button w3-block w3-black">HOME</a>
-      </div>
-      <div class="w3-col s3">
-        <a href="https://eas962.github.io/girlswhofinance/stocks.html" class="w3-button w3-block w3-black">STOCKS</a>
-      </div>
-      <div class="w3-col s3">
-        <a href="https://eas962.github.io/girlswhofinance/PF.html" class="w3-button w3-block w3-black">PERSONAL FINANCE</a>
-      </div>
-      <div class="w3-col s3">
-        <a href="https://eas962.github.io/girlswhofinance/resources.html" class="w3-button w3-block w3-black">RESOURCES</a>
-      </div>
-    </div>
-  </div>
-</div>
+<style>
+* {box-sizing: border-box}
 
-<div class="w3-container" id="about">
-  <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">STOCKS</span></h5>
-    <p>STOCKS tab</p>
-    <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
-    <div class="w3-panel w3-leftbar w3-light-grey">
-      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
-      <p>Chef, Coffeeist and Owner: Liam Brown</p>
-    </div>
+
+/* Style the verticals tab */
+div.tab {
+    float: left;
+    font-family: sans-serif;
+    background-color: #f1f1f1;
+    width: 30%;
     
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-    <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
-    <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
-  </div>
-</div>
-
-<script>
-// Tabbed Menu
-function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("menu");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-     tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
 }
-document.getElementById("myLink").click();
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
+div.fixed {
+    position: fixed;
+    top: 150px;
+    left: 10px;
+    width: 400px;
+    }
+
+/* Style the buttons inside the tab */
+div.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 20px 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: right;
+    padding: 0px 12px;
+    border: none;
+    width: 80%;
+    height: 300px;
+}
+</style>
+
+<body>
+    <!-- Links (sit on top) -->
+    <div class="navbar">
+      <div class="w3-top">
+        <div class="w3-row w3-padding w3-black">
+          <div class="w3-col s3">
+            <a 	href="https://eas962.github.io/girlswhofinance/website.html" class="w3-button w3-block w3-black">HOME</a>
+          </div>
+          <div class="w3-col s3">
+            <a href="https://eas962.github.io/girlswhofinance/stocks.html" class="w3-button w3-block w3-black">STOCKS</a>
+          </div>
+          <div class="w3-col s3">
+            <a href="https://eas962.github.io/girlswhofinance/PF.html" class="w3-button w3-block w3-black">PERSONAL FINANCE</a>
+          </div>
+          <div class="w3-col s3">
+            <a href="https://eas962.github.io/girlswhofinance/resources.html" class="w3-button w3-block w3-black">RESOURCES</a>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--these are the tabs-->
+      <div class="w3-content" style="max-width:700px"> 
+        <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">STOCKS</span></h5>
+        <div class="fixed">
+          <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Chapter 1')">Chapter 1</button>
+            <button class="tablinks" onclick="openTab(event, 'Chapter 2')">Chapter 2</button>
+            <button class="tablinks" onclick="openTab(event, 'Chapter 3')">Chapter 3</button>
+            <button class="tablinks" onclick="openTab(event, 'Chapter 4')">Chapter 4</button>
+            <button class="tablinks" onclick="openTab(event, 'Glossary')">Glossary</button>
+
+          </div>
+        </div>
+        <div id="stock home" class ="tabcontent"> 
+          <p> This is the Stocks default page. </p>
+         </div> 
+        <div id="Chapter 1" class="tabcontent" style="display: none;">
+          <h3>Chapter 1</h3>
+          <p>this is chapter 1</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+        </div>
+
+        <div id="Chapter 2" class="tabcontent" style="display: none;">
+          <h3>Chapter 2</h3>
+          <p>this is chapter 2</p> 
+        </div>
+
+        <div id="Glossary" class="tabcontent" style="display: none;">
+          <h3>Glossary</h3>
+          <p>this is a glossary of terms</p>
+        </div> 
+
+        <div id="Chapter 3" class="tabcontent" style="display: none;">
+          <h3>Chapter 3</h3>
+          <p>this is chapter 3</p>
+        </div>
+
+        <div id="Chapter 4" class="tabcontent" style="display: none;">
+          <h3>Chapter 4</h3>
+          <p>this is chapter 4</p>
+        </div>
+      </div> 
+
+    <script>
+
+    function openTab(evt, TabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(TabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
 
 </body>
 </html>
