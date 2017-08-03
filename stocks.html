@@ -21,8 +21,6 @@
 
 <style>
 * {box-sizing: border-box}
-
-
 /* Style the verticals tab */
 div.tab {
     float: left;
@@ -37,7 +35,6 @@ div.fixed {
     left: 10px;
     width: 400px;
     }
-
 /* Style the buttons inside the tab */
 div.tab button {
     display: block;
@@ -52,17 +49,14 @@ div.tab button {
     transition: 0.3s;
     font-size: 15px;
 }
-
 /* Change background color of buttons on hover */
 div.tab button:hover {
     background-color: #ddd;
 }
-
 /* Create an active/current "tab button" class */
 div.tab button.active {
     background-color: #ccc;
 }
-
 /* Style the tab content */
 .tabcontent {
     float: right;
@@ -70,6 +64,9 @@ div.tab button.active {
     border: none;
     width: 80%;
     height: 300px;
+}
+h3{
+	text-decoration: underline;
 }
 </style>
 
@@ -111,27 +108,13 @@ div.tab button.active {
          </div> 
         <div id="Chapter 1" class="tabcontent" style="display: none;">
           <h3>Chapter 1</h3>
-          <p>this is chapter 1</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
-          <p>Some text some text some text some text..</p>
+          <h4>Covered Calls and Options</h4>
+          <h5>What is a covered Call?</h5>
+          <p>A covered call is a trading strategy where you own a stock and sell options on it. This is an easy way to start trading while also making a decent profit. </p>
+          <h4>Let's Break This Down</h4>
+          <h5>What is an Option and What Does it Mean to Sell it?</h5>
+          <p>An option is a derivative (think Latin roots, not math), which means that it is not the actual stock, but a form of it that moves based on the actual stock (called an underlying).</p>
+          <p>Example: 100 shares of Apple stock would cost $15,500, but an option for 100 shares would cost $500. If Apple goes up $5 a share, you make the same profit $500. That is 3% if you own the stock, but 100% if you own the option.</p>
         </div>
 
         <div id="Chapter 2" class="tabcontent" style="display: none;">
@@ -156,7 +139,6 @@ div.tab button.active {
       </div> 
 
     <script>
-
     function openTab(evt, TabName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
@@ -170,7 +152,6 @@ div.tab button.active {
         document.getElementById(TabName).style.display = "block";
         evt.currentTarget.className += " active";
     }
-
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
     </script>
