@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <!--style sheet for the website-->
@@ -33,14 +34,14 @@ div.fixed {
     position: fixed;
     top: 150px;
     left: 10px;
-    width: 400px;
+    width: 600px;
     }
 /* Style the buttons inside the tab */
 div.tab button {
     display: block;
     background-color: inherit;
     color: black;
-    padding: 20px 20px;
+    padding: 12px 20px;
     width: 100%;
     border: none;
     outline: none;
@@ -48,6 +49,7 @@ div.tab button {
     cursor: pointer;
     transition: 0.3s;
     font-size: 15px;
+	font-family: "Inconsolata", sans-serif;
 }
 /* Change background color of buttons on hover */
 div.tab button:hover {
@@ -95,11 +97,11 @@ h3{
         <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">STOCKS</span></h5>
         <div class="fixed">
           <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'Chapter 1')">Chapter 1</button>
+            <button class="tablinks" onclick="openTab(event, 'Chapter 1')"><strong>Chapter 1</button>
             <button class="tablinks" onclick="openTab(event, 'Chapter 2')">Chapter 2</button>
             <button class="tablinks" onclick="openTab(event, 'Chapter 3')">Chapter 3</button>
             <button class="tablinks" onclick="openTab(event, 'Chapter 4')">Chapter 4</button>
-            <button class="tablinks" onclick="openTab(event, 'Glossary')">Glossary</button>
+		    <button class="tablinks" onclick="openTab(event, 'Glossary')">Glossary</strong></button>
 
           </div>
         </div>
@@ -109,12 +111,25 @@ h3{
         <div id="Chapter 1" class="tabcontent" style="display: none;">
           <h3>Chapter 1</h3>
           <h4>Covered Calls and Options</h4>
-          <h5>What is a covered Call?</h5>
-          <p>A covered call is a trading strategy where you own a stock and sell options on it. This is an easy way to start trading while also making a decent profit. </p>
-          <h4>Let's Break This Down</h4>
           <h5>What is an Option and What Does it Mean to Sell it?</h5>
           <p>An option is a derivative (think Latin roots, not math), which means that it is not the actual stock, but a form of it that moves based on the actual stock (called an underlying).</p>
-          <p>Example: 100 shares of Apple stock would cost $15,500, but an option for 100 shares would cost $500. If Apple goes up $5 a share, you make the same profit $500. That is 3% if you own the stock, but 100% if you own the option.</p>
+          <h5>What is a Covered Call?</h5>
+          <p>A covered call is a trading strategy where you own a stock and sell options on it. This is an easy low risk way to start trading options while also improving your profit.</p>
+          
+          <p>For example, you own 100 shares of Apple which is trading at $155/share.  You are willing to sell the stock if it reaches $160 so you sell a call option for $160.  You might receive $2.35 per share for this option, or a total of $235.  What happens next?</p>
+          
+          <p>The $235 is yours to keep no matter what the price of Apple stock is when the option expires.</p>
+          
+          <p>If Apple stock is below $160 nothing else happens and you are free to sell a new call option in the next period and make another $235.</p>
+          
+          <p>If Apple is above $160 the option will be “exercised” and you will sell your stock for $160 per share.  In this case you made $500 gain when the stock moved from $155 to $160, plus $235 for the option.  A total profit of $735.</p>
+          <h5>You Can Also Use Options in Place of Stock</h5>
+          
+          <p>100 shares of Apple stock trading at $155/share would cost $15,500, but an at the money option for 100 shares would only cost $500. If Apple goes up $5 a share, you make the same profit of $500 on the option as you would on 100 shares of stock. That is 3% profit if you own the stock, but 100% if you own the option.</p>
+          <h5>What is the Risk of an Option?</h5>
+          <p>If the stock does not go up before the option expires your option expires worthless and you are out the $500.</p>
+          <p>Options are a powerful tool to improve your investing results.  Take the time to educate yourself!</p>
+          
         </div>
 
         <div id="Chapter 2" class="tabcontent" style="display: none;">
@@ -158,3 +173,4 @@ h3{
 
 </body>
 </html>
+
